@@ -96,10 +96,6 @@
     width: 50vw;
   }
 
-  h1 > span:first-of-type {
-    font-size: calc(1vw + 4rem);
-  }
-
   h1 > span:last-of-type {
     font-size: calc(1vw + 1.5rem);
   }
@@ -196,28 +192,29 @@
     margin: 0;
   }
 
-  main > section:last-of-type {
+  .contact-container {
     position: relative;
-    top: 0;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin: 0;
   }
 
-  main > section > img {
+  .contact-container > img {
     display: flex;
     align-self: center;
     width: 25vw;
     object-fit: cover;
   }
 
-  .contact {
+  .contact,
+  .address {
     display: flex;
     flex-direction: column;
     align-self: center;
     font-size: calc(0.4vw + 1rem);
     color: #2a2a2c;
+    min-width: 25vw;
     padding: 1rem;
   }
 
@@ -250,6 +247,15 @@
   .contact > span > a:hover {
     background-position: 0%;
   }
+
+  .address {
+    text-align: center;
+    font-size: calc(0.3vw + 1rem);
+  }
+
+  .address > span {
+    z-index: 1;
+  }
 }
 
 @layer animations {
@@ -271,12 +277,12 @@
     header:before {
       animation: fade both linear;
       animation-timeline: scroll();
-      animation-range: entry;
+      animation-range: entry 0% 50%;
     }
 
     @keyframes fade {
       to {
-        opacity: 1;
+        opacity: 0.85;
       }
     }
 
@@ -284,7 +290,7 @@
     .content-3 {
       transform: translateY(100%);
       animation: slide-in both linear;
-      animation-timeline: view(20%);
+      animation-timeline: view(40%);
       animation-range: entry;
     }
 
@@ -324,11 +330,6 @@
         justify-content: center;
       }
 
-      main > section > img {
-        min-width: 50vw;
-        order: 1;
-      }
-
       main:before {
         border-right: 40vw solid transparent;
         border-bottom: 40vw solid #caaf7a;
@@ -347,6 +348,15 @@
 
       main > section:last-of-type {
         margin: 2rem 0;
+      }
+
+      .contact-container {
+        flex-direction: column;
+      }
+
+      .contact-container > img {
+        min-width: 50vw;
+        order: 1;
       }
 
       .contact {
