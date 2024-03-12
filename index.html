@@ -99,13 +99,4 @@
   </body>
 </html>
 
-<script>
-  const encodedEmailTB = "dG9tLmJsb2htZUB2YWx2ZXQudGVjaA==";
-  const encodedEmailCP = "Y2hyaXN0aWFuLnBhbG1xdmlzdEB2YWx2ZXQudGVjaA==";
-  const emailTB = document.getElementById("email-tb");
-  emailTB.setAttribute("href", `mailto:${atob(encodedEmailTB)}`);
-  emailTB.innerText = atob(encodedEmailTB);
-  const emailCP = document.getElementById("email-cp");
-  emailCP.setAttribute("href", `mailto:${atob(encodedEmailCP)}`);
-  emailCP.innerText = atob(encodedEmailCP);
-</script>
+<script src="/index.js" type="module"></script>
