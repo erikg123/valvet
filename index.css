@@ -13,9 +13,19 @@
     scroll-behavior: smooth;
   }
 
+  :root {
+    --color-blackish: #2a2a2c;
+    --color-white: #ffffff;
+    --color-gold: #caaf7a;
+  }
+
   body {
     min-height: 100vh;
-    background: linear-gradient(180deg, #2a2a2c, #ffeedc);
+    background: linear-gradient(
+      180deg,
+      var(--color-blackish),
+      var(--color-white)
+    );
     font-family: "Jost", sans-serif;
     font-weight: 80;
     overflow-x: hidden;
@@ -26,7 +36,7 @@
     bottom: 2rem;
     right: 2rem;
     width: 3rem;
-    color: hsl(0 0% 100%);
+    color: var(--color-white);
     aspect-ratio: 1;
     z-index: 1;
     mix-blend-mode: difference;
@@ -55,7 +65,7 @@
 
   header > div > a {
     text-decoration: none;
-    color: hsl(0 0% 100%);
+    color: var(--color-white);
     font-size: calc(0.4vw + 1rem);
   }
 
@@ -64,8 +74,8 @@
     display: inline-block;
     width: calc(0.4vw + 10px);
     height: calc(0.4vw + 10px);
-    border-right: 2px solid hsl(0 0% 100%);
-    border-bottom: 2px solid hsl(0 0% 100%);
+    border-right: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
     transform: rotate(45deg);
     margin: 0 0 4px calc(0.4vw + 8px);
   }
@@ -87,16 +97,13 @@
     text-align: center;
     gap: 1rem 0;
     font-weight: 120;
-    color: hsl(0, 0%, 100%);
+    color: var(--color-white);
     line-height: 0.9;
     z-index: 2;
   }
 
   h1 > span {
     width: 50vw;
-  }
-
-  h1 > span:last-of-type {
     font-size: calc(1vw + 1.5rem);
   }
 
@@ -107,7 +114,7 @@
     left: 0;
     height: 100%;
     width: 100vw;
-    background: hsl(0, 0%, 5%);
+    background: var(--color-blackish);
     z-index: 1;
     opacity: 0;
   }
@@ -125,7 +132,7 @@
     left: 0;
     bottom: 0;
     border-right: 20vw solid transparent;
-    border-bottom: 20vw solid #caaf7a;
+    border-bottom: 20vw solid var(--color-gold);
   }
 
   main > section {
@@ -218,7 +225,7 @@
     flex-direction: column;
     align-self: center;
     font-size: calc(0.4vw + 1rem);
-    color: #2a2a2c;
+    color: var(--color-blackish);
     min-width: 25vw;
     padding: 1rem;
   }
@@ -233,15 +240,15 @@
   }
 
   .contact > span > a {
-    color: #2a2a2c;
+    color: var(--color-blackish);
     text-decoration: none;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(
       to right,
-      #caaf7a,
-      #caaf7a 50%,
-      #2a2a2c 50%
+      var(--color-gold),
+      var(--color-gold) 50%,
+      var(--color-blackish) 50%
     );
     background-size: 200% 100%;
     background-position: -100%;
@@ -352,7 +359,7 @@
 
       main:before {
         border-right: 40vw solid transparent;
-        border-bottom: 40vw solid #caaf7a;
+        border-bottom: 40vw solid var(--color-gold);
       }
 
       .content-1:before,
@@ -379,10 +386,6 @@
 
       .contact {
         text-align: center;
-      }
-
-      .social-icon {
-        width: 3rem;
       }
     }
   }
