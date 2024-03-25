@@ -242,22 +242,10 @@
   .contact > span > a {
     color: var(--color-blackish);
     text-decoration: none;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-      to right,
-      var(--color-gold),
-      var(--color-gold) 50%,
-      var(--color-blackish) 50%
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    transition: all 0.3s ease-in-out;
-    z-index: 1;
   }
 
   .contact > span > a:hover {
-    background-position: 0%;
+    color: var(--color-gold);
   }
 
   .address {
