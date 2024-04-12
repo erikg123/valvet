@@ -1,4 +1,4 @@
-@import "https://unpkg.com/normalize.css" layer(normalize);
+@import "/normalize.css" layer(normalize);
 
 @font-face {
   font-family: Jost;
