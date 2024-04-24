@@ -105,3 +105,9 @@
 </html>
 
 <script src="/index.js" type="module"></script>
+<script src="STATS_URL/stats.js" type="module" onload="pageView()"></script>
+<script>
+  function pageView() {
+    trackPageView(window.location.pathname, 1);
+  }
+</script>

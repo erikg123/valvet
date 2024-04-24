@@ -11,6 +11,9 @@ jobs:
       - name: Get latest code
         uses: actions/checkout@v4
 
+      - name: Replace GitHub Secret
+        run: sed -i 's/STATS_URL/${{ secrets.stats_url }}/g' index.html
+
       - name: Push files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
